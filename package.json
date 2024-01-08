@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/https://github.com/Antihor/goit-js-hw-9/",
+    "build": "vite build --base=/https://Antihor/goit-js-hw-9/",
     "preview": "vite preview"
   },
   "devDependencies": {
