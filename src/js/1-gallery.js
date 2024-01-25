@@ -70,9 +70,6 @@ const images = [
 
 const galleryRef = document.querySelector('.gallery');
 
-const markup = createGallery(images);
-galleryRef.insertAdjacentHTML('afterbegin', markup);
-
 function createGallery(images) {
   return images
     .map(
@@ -86,8 +83,10 @@ function createGallery(images) {
     .join('');
 }
 
-let gallery = new SimpleLightbox('.gallery a');
-gallery.on('show.simplelightbox', function () {
-  captionPosition: 'bottom';
-  captionDelay: 250;
+const markup = createGallery(images);
+galleryRef.insertAdjacentHTML('afterbegin', markup);
+
+const gallery = new SimpleLightbox('.gallery a', {
+  captionPosition: 'bottom',
+  captionDelay: 250,
 });
